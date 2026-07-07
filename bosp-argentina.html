@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BOSP ARGENTINA - Seguridad Privada</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "tertiary": "#006a3e",
+                "primary-container": "#0077c8",
+                "surface-variant": "#e0e3e5",
+                "secondary-fixed-dim": "#bcc7dd",
+                "on-background": "#181c1e",
+                "surface-container-high": "#e5e9eb",
+                "surface-dim": "#d7dadc",
+                "on-tertiary-fixed-variant": "#00522f",
+                "tertiary-fixed-dim": "#74db9d",
+                "inverse-surface": "#2d3133",
+                "on-secondary-container": "#586377",
+                "surface-container-low": "#f1f4f6",
+                "on-primary-fixed-variant": "#00497e",
+                "error-container": "#ffdad6",
+                "outline-variant": "#c0c7d3",
+                "on-primary-container": "#fbfbff",
+                "on-tertiary-fixed": "#002110",
+                "inverse-primary": "#9fcaff",
+                "on-primary-fixed": "#001d36",
+                "on-surface-variant": "#404751",
+                "on-surface": "#181c1e",
+                "surface-container": "#ebeef0",
+                "surface-bright": "#f7fafc",
+                "primary": "#005e9f",
+                "secondary": "#545f72",
+                "on-error": "#ffffff",
+                "surface-container-highest": "#e0e3e5",
+                "on-secondary": "#ffffff",
+                "secondary-container": "#d5e0f7",
+                "surface-container-lowest": "#ffffff",
+                "surface": "#f7fafc",
+                "tertiary-container": "#0d8550",
+                "on-primary": "#ffffff",
+                "background": "#f7fafc",
+                "primary-fixed-dim": "#9fcaff",
+                "inverse-on-surface": "#eef1f3",
+                "surface-tint": "#0061a5",
+                "on-error-container": "#93000a",
+                "outline": "#717783",
+                "error": "#ba1a1a",
+                "on-tertiary-container": "#f3fff3",
+                "on-tertiary": "#ffffff",
+                "primary-fixed": "#d2e4ff",
+                "on-secondary-fixed": "#111c2c",
+                "secondary-fixed": "#d8e3fa",
+                "tertiary-fixed": "#91f8b8",
+                "on-secondary-fixed-variant": "#3c475a"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+        },
+        "spacing": {
+                "margin-mobile": "16px",
+                "unit": "8px",
+                "stack-md": "16px",
+                "margin-desktop": "40px",
+                "stack-sm": "8px",
+                "stack-lg": "32px",
+                "gutter": "24px",
+                "container-max-width": "1280px"
+        },
+        "fontFamily": {
+                "headline-lg": [
+                        "Inter"
+                ],
+                "body-lg": [
+                        "Inter"
+                ],
+                "label-sm": [
+                        "Inter"
+                ],
+                "headline-md": [
+                        "Inter"
+                ],
+                "body-md": [
+                        "Inter"
+                ],
+                "label-md": [
+                        "Inter"
+                ],
+                "headline-xl": [
+                        "Inter"
+                ]
+        },
+        "fontSize": {
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-sm": [
+                        "12px",
+                        {
+                                "lineHeight": "16px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ],
+                "label-md": [
+                        "14px",
+                        {
+                                "lineHeight": "20px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-xl": [
+                        "40px",
+                        {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col">
+<!-- Universal Navbar -->
+<nav class="fixed top-0 left-0 w-full h-[80px] flex items-center justify-center z-[1000] bg-[#021224] border-b border-white/5 transition-all duration-300">
+  <div class="w-full max-w-[1200px] px-8 flex items-center justify-between">
+    <a href="index.html" class="flex items-center">
+      <img src="images/logo1.png" alt="GRUPO BOSP" class="h-[55px] w-auto object-contain transition-all duration-300">
+    </a>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="text-white/85 text-[15px] font-medium py-2 px-4 relative transition-all duration-300 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#87D0E1] after:transition-all after:duration-300">Inicio</a>
+      <a href="index.html#about" class="text-white/85 text-[15px] font-medium py-2 px-4 relative transition-all duration-300 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#87D0E1] after:transition-all after:duration-300">Quiénes Somos</a>
+      <div class="relative group">
+        <div class="flex items-center gap-1 cursor-pointer text-white/85 text-[15px] font-medium py-2 px-4 hover:text-white transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#87D0E1] after:transition-all after:duration-300">
+          Servicios
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 min-w-[240px] bg-[#021224]/95 backdrop-blur-md rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-[0_16px_48px_rgba(2,18,36,0.8)] border border-white/10">
+          <a href="bosp-argentina.html" class="flex items-center gap-2 p-2 rounded-md text-[14px] text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="w-8 h-8 rounded-md bg-[#87D0E1]/15 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#87D0E1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="flex flex-col">
+              <span>BOSP Argentina</span>
+              <span class="text-[12px] text-white/50 font-normal">Seguridad Física</span>
+            </div>
+          </a>
+          <a href="bosp-tech.html" class="flex items-center gap-2 p-2 rounded-md text-[14px] text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="w-8 h-8 rounded-md bg-[#87D0E1]/15 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#87D0E1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            </div>
+            <div class="flex flex-col">
+              <span>BOSP Tech</span>
+              <span class="text-[12px] text-white/50 font-normal">Seguridad Tecnológica</span>
+            </div>
+          </a>
+          <a href="bosp-facility.html" class="flex items-center gap-2 p-2 rounded-md text-[14px] text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="w-8 h-8 rounded-md bg-[#87D0E1]/15 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#87D0E1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="flex flex-col">
+              <span>BOSP Facility</span>
+              <span class="text-[12px] text-white/50 font-normal">Mantenimiento y Limpieza</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a href="contacto.html" class="text-white/85 text-[15px] font-medium py-2 px-4 relative transition-all duration-300 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#87D0E1] after:transition-all after:duration-300">Contacto</a>
+    </div>
+    <button class="md:hidden text-white flex flex-col gap-[5px] p-2">
+      <span class="w-[26px] h-[2.5px] bg-white rounded-sm"></span>
+      <span class="w-[26px] h-[2.5px] bg-white rounded-sm"></span>
+      <span class="w-[26px] h-[2.5px] bg-white rounded-sm"></span>
+    </button>
+  </div>
+</nav>
+<div class="h-[80px] w-full bg-background"></div>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full h-[600px] flex items-center justify-center overflow-hidden bg-surface-dim">
+<img alt="Seguridad Privada" class="absolute inset-0 w-full h-full object-cover opacity-60" src="images/Argentina/Bosp-argentina1.JPG"/>
+<div class="absolute inset-0 bg-on-surface/40"></div>
+<div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+<h1 class="text-white text-headline-xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-md">Seguridad Privada con Respaldo Operativo</h1>
+<p class="text-white/90 text-body-lg mb-8 max-w-2xl mx-auto drop-shadow">Brindamos soluciones integrales de seguridad con personal altamente capacitado y tecnología de vanguardia.</p>
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-3 rounded-full font-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-lg" href="#contacto">
+          Contáctenos
+        </a>
+</div>
+</section>
+<!-- Nuestra Compañía -->
+<section class="py-16 md:py-24 bg-surface px-margin-mobile md:px-margin-desktop" id="compania">
+<div class="max-w-container-max-width mx-auto flex flex-col md:flex-row gap-12 items-center">
+<div class="w-full md:w-1/2">
+<h2 class="text-primary text-headline-lg mb-6">Nuestra Compañía</h2>
+<p class="text-on-surface-variant text-body-lg mb-6 leading-relaxed">
+            Somos una empresa líder en seguridad privada, con años de experiencia protegiendo lo que más importa. Nuestro equipo está conformado por profesionales altamente capacitados, comprometidos con la excelencia y la integridad en cada servicio.
+          </p>
+<div class="flex gap-4">
+<div class="bg-surface-container p-6 rounded-lg flex-1 border border-outline-variant shadow-sm">
+<h3 class="font-headline-md text-on-surface mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">target</span> Misión
+                </h3>
+<p class="text-on-surface-variant text-body-sm">Proveer servicios de seguridad de la más alta calidad, garantizando la tranquilidad de nuestros clientes.</p>
+</div>
+<div class="bg-surface-container p-6 rounded-lg flex-1 border border-outline-variant shadow-sm">
+<h3 class="font-headline-md text-on-surface mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">visibility</span> Visión
+                </h3>
+<p class="text-on-surface-variant text-body-sm">Ser reconocidos como el referente de excelencia y confiabilidad en seguridad privada a nivel nacional.</p>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<img alt="Personal de BOSP" class="w-full h-auto rounded-xl shadow-lg object-cover aspect-video" src="images/Argentina/Bosp-argentina2.JPG"/>
+</div>
+</div>
+</section>
+<!-- Movilidad Estratégica -->
+<section class="py-16 md:py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max-width mx-auto flex flex-col lg:flex-row gap-12 items-center">
+<div class="w-full lg:w-1/2 relative overflow-hidden rounded-xl h-64 md:h-96 shadow-lg border border-outline-variant">
+<div class="absolute inset-0 flex transition-transform duration-1000 ease-in-out" id="fleet-slider" style="width: 300%;">
+<img alt="Vehículo BOSP" class="w-1/3 h-full object-cover" src="images/Argentina/argentina6.jpg"/>
+<img alt="Vehículo BOSP" class="w-1/3 h-full object-cover" src="images/Argentina/argentina7.jpg"/>
+<img alt="Motos BOSP" class="w-1/3 h-full object-cover" src="images/Argentina/argentina9.png"/>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<h2 class="text-primary text-headline-lg mb-6">Movilidad Estratégica</h2>
+<p class="text-on-surface-variant text-body-lg leading-relaxed">
+        Contamos con una flota moderna de unidades móviles y patrullas motorizadas equipadas con tecnología de rastreo GPS, permitiendo una cobertura total para rondines perimetrales constantes y respuesta inmediata ante cualquier eventualidad.
+      </p>
+</div>
+</div>
+</section>
+<!-- Excelencia Operativa -->
+<section class="py-16 md:py-24 bg-surface px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max-width mx-auto">
+<h2 class="text-primary text-headline-lg text-center mb-12">Excelencia Operativa</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-md border border-outline-variant group hover:shadow-lg transition-shadow">
+<img alt="Inspección y Control" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="images/Argentina/Bosp-argentina5.JPG"/>
+<div class="p-6">
+<h3 class="text-headline-md text-on-surface mb-2">Inspección y Control</h3>
+<p class="text-on-surface-variant text-body-md">Procedimientos rigurosos de verificación y monitoreo para detectar y prevenir incidentes antes de que ocurran.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-md border border-outline-variant group hover:shadow-lg transition-shadow">
+<img alt="Comunicación Constante" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="images/Argentina/Bosp-argentina4.JPG"/>
+<div class="p-6">
+<h3 class="text-headline-md text-on-surface mb-2">Comunicación Constante</h3>
+<p class="text-on-surface-variant text-body-md">Sistemas de radio y reporte en tiempo real para mantener una coordinación operativa perfecta y respuesta inmediata.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container rounded-xl overflow-hidden shadow-md border border-outline-variant group hover:shadow-lg transition-shadow">
+<img alt="Control de Accesos" class="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300" src="images/Argentina/Bosp-argentina3.JPG"/>
+<div class="p-6">
+<h3 class="text-headline-md text-on-surface mb-2">Control de Accesos</h3>
+<p class="text-on-surface-variant text-body-md">Gestión estricta de entradas y salidas, registro de visitantes y validación de identidades para instalaciones seguras.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Dónde Brindamos Servicios -->
+<section class="py-16 bg-surface-container-low px-margin-mobile md:px-margin-desktop" id="servicios">
+<div class="max-w-container-max-width mx-auto">
+<h2 class="text-primary text-headline-lg text-center mb-12">Dónde Brindamos Servicios</h2>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+<div class="bg-surface p-6 rounded-xl text-center shadow-sm border border-outline-variant flex flex-col items-center gap-4 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-4xl text-secondary">factory</span>
+<span class="font-label-md text-on-surface">Bodegas</span>
+</div>
+<div class="bg-surface p-6 rounded-xl text-center shadow-sm border border-outline-variant flex flex-col items-center gap-4 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-4xl text-secondary">apartment</span>
+<span class="font-label-md text-on-surface">Edificios</span>
+</div>
+<div class="bg-surface p-6 rounded-xl text-center shadow-sm border border-outline-variant flex flex-col items-center gap-4 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-4xl text-secondary">storefront</span>
+<span class="font-label-md text-on-surface">Comercios</span>
+</div>
+<div class="bg-surface p-6 rounded-xl text-center shadow-sm border border-outline-variant flex flex-col items-center gap-4 hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-4xl text-secondary">local_hospital</span>
+<span class="font-label-md text-on-surface">Clínicas</span>
+</div>
+<div class="bg-surface p-6 rounded-xl text-center shadow-sm border border-outline-variant flex flex-col items-center gap-4 hover:border-primary transition-colors col-span-2 md:col-span-1">
+<span class="material-symbols-outlined text-4xl text-secondary">local_shipping</span>
+<span class="font-label-md text-on-surface">Centros Logísticos</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Capacitaciones -->
+<section class="py-16 md:py-24 bg-primary text-on-primary px-margin-mobile md:px-margin-desktop" id="capacitaciones">
+<div class="max-w-container-max-width mx-auto flex flex-col md:flex-row items-center gap-8">
+<div class="md:w-2/3">
+<h2 class="text-headline-lg mb-4">Capacitaciones (Ley 9578)</h2>
+<p class="text-body-lg text-primary-fixed-dim">
+            Nuestro personal cumple rigurosamente con los programas de formación y actualización exigidos por la legislación vigente, asegurando un desempeño profesional, ético y apegado a las normativas de seguridad privada.
+          </p>
+</div>
+<div class="md:w-1/3 flex justify-center md:justify-end">
+<span class="material-symbols-outlined text-9xl text-primary-fixed opacity-50">school</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest py-12 px-margin-mobile md:px-margin-desktop border-t border-outline-variant" id="contacto">
+<div class="max-w-container-max-width mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-2">
+<div class="flex items-center gap-2 text-primary font-headline-md mb-4">
+<span class="material-symbols-outlined">security</span>
+<span>BOSP ARGENTINA</span>
+</div>
+<p class="text-on-surface-variant text-body-md mb-4 max-w-sm">
+          Excelencia y respaldo operativo en seguridad privada para empresas, instituciones y consorcios.
+        </p>
+</div>
+<div>
+<h4 class="font-headline-sm text-on-surface mb-4">Contacto</h4>
+<ul class="space-y-2 text-on-surface-variant text-body-md">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">mail</span> bospar@gmail.com</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">phone</span> 2617755408</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-sm">location_on</span> Mendoza, Argentina</li>
+</ul>
+</div>
+<div>
+<h4 class="font-headline-sm text-on-surface mb-4">Legal</h4>
+<ul class="space-y-2 text-on-surface-variant text-body-md">
+<li><a class="hover:text-primary transition-colors" href="#">Términos y Condiciones</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Legajos (Ley 9578)</a></li>
+</ul>
+</div>
+</div>
+<div class="max-w-container-max-width mx-auto mt-12 pt-8 border-t border-outline text-center text-on-surface-variant text-label-sm">
+      © 2024 BOSP ARGENTINA. Todos los derechos reservados.
+    </div>
+</footer>
+<script>
+  let currentFleetSlide = 0;
+  const fleetSlider = document.getElementById('fleet-slider');
+  if(fleetSlider) {
+    setInterval(() => {
+      currentFleetSlide = (currentFleetSlide + 1) % 3;
+      fleetSlider.style.transform = `translateX(-${(currentFleetSlide * 100) / 3}%)`;
+    }, 4000);
+  }
+</script>
+</body></html>

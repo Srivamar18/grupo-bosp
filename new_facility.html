@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BOSP Facility Service | Gestión Integral de Servicios</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#181c1e",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "inverse-primary": "#9fcaff",
+                    "tertiary": "#006a3e",
+                    "on-surface-variant": "#404751",
+                    "background": "#f7fafc",
+                    "tertiary-fixed-dim": "#74db9d",
+                    "primary-container": "#0077c8",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e0e3e5",
+                    "on-secondary-container": "#586377",
+                    "tertiary-fixed": "#91f8b8",
+                    "on-primary-fixed-variant": "#00497e",
+                    "on-secondary-fixed": "#111c2c",
+                    "primary-fixed-dim": "#9fcaff",
+                    "primary-fixed": "#d2e4ff",
+                    "outline": "#717783",
+                    "outline-variant": "#c0c7d3",
+                    "surface-bright": "#f7fafc",
+                    "on-background": "#181c1e",
+                    "surface-tint": "#0061a5",
+                    "secondary-container": "#d5e0f7",
+                    "on-tertiary-fixed": "#002110",
+                    "on-primary": "#ffffff",
+                    "tertiary-container": "#0d8550",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e5e9eb",
+                    "on-tertiary-fixed-variant": "#00522f",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#d7dadc",
+                    "secondary-fixed-dim": "#bcc7dd",
+                    "inverse-on-surface": "#eef1f3",
+                    "primary": "#005e9f",
+                    "on-primary-container": "#fbfbff",
+                    "on-tertiary-container": "#f3fff3",
+                    "surface-container-highest": "#e0e3e5",
+                    "surface-container-low": "#f1f4f6",
+                    "secondary": "#545f72",
+                    "surface": "#f7fafc",
+                    "inverse-surface": "#2d3133",
+                    "on-primary-fixed": "#001d36",
+                    "surface-container": "#ebeef0",
+                    "secondary-fixed": "#d8e3fa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "margin-mobile": "16px",
+                    "container-max-width": "1280px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "40px",
+                    "stack-sm": "8px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "headline-xl": ["Inter"],
+                    "label-md": ["Inter"],
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(224, 227, 229, 0.5);
+        }
+        .hover-lift {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .blend-multiply {
+            mix-blend-mode: multiply;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="bg-surface/90 backdrop-blur-md sticky top-0 z-50 border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<a class="block transition-all duration-300 hover:scale-105 hover:brightness-110" href="#">
+<img alt="BOSP Facility Service Logo" class="h-16 w-auto object-contain blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhE9w9NL9KIqmflrdyaOUAED8EPH6E31KJmu9aGLUrFe_Cwz4mhR-n3ewq0qYeND6w5JHqxuGA_eKTh8hCYu_IB929MB5WEL9w0Cy6qXl2H28q9S62qCbVnKaD3iHa3jbaBsqW0j9x9GpqisnpDG-aplqXUxwennqHEEkI2-0oofnuDutt9xpEZfVKjc-vMl9JvLkYFMlqXQPtV39Qm6E4taNW0YSP1E3xgG7H6E4JmygA38JYn6UYZgz5x-0qrbsVAkQ"/>
+</a>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-md text-label-md text-[#2D6A24] border-b-2 border-[#2D6A24] font-bold pb-1" href="#">Servicios</a>
+<a class="font-label-md text-label-md text-[#2D6A24]/70 hover:text-[#2D6A24] transition-colors duration-200" href="#">Quiénes Somos</a>
+<a class="font-label-md text-label-md text-[#2D6A24]/70 hover:text-[#2D6A24] transition-colors duration-200" href="#">Contacto</a>
+<button class="bg-[#2D6A24] text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:bg-[#1a4513] transition-all shadow-sm">
+                    Presupuesto
+                </button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-[#2D6A24]">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Maintenance Professional" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVULPDLf12NeWqnOLU5vhXpHAuL6SUQy1zGUG9fpIKNe2W0Tqz_CO7--Lf7MQ878P52kRwc8QKffuspvSKVp_bpc0Rw2bqzVphb08fvg5MzEYqgt57BkLvQgFLW5V4o0g6I9Toh4OpxuJ5o4rpRJbys1sALAioeKU_0VPnyjMK_fvhXxm_0vUcMpYj1EOspA7SaTxJRES7VfruWq-mCvf7Kug111ulE3147JSdgfhYxWLiWX7CrDirPhVdkQvameq-8P9ydvPP_-A6"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/80 via-on-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1 bg-primary/20 text-primary-fixed-dim rounded-full text-label-sm font-label-sm mb-stack-md backdrop-blur-sm border border-primary/30">
+                    BOSP ARGENTINA SAS
+                </span>
+<h1 class="font-headline-xl text-headline-xl text-surface-container-lowest mb-stack-md leading-tight">
+                    Gestión Integral de Servicios para Complejos y Edificios
+                </h1>
+<p class="font-body-lg text-body-lg text-surface-variant mb-stack-lg max-w-lg">
+                    Soluciones profesionales de mantenimiento, limpieza y jardinería con un enfoque preventivo y estructura sólida.
+                </p>
+<div class="flex flex-wrap gap-stack-md">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-primary-container transition-all flex items-center gap-2">
+                        Solicitar presupuesto
+                        <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest/10 backdrop-blur-md border border-surface-container-lowest/30 text-surface-container-lowest px-8 py-4 rounded-lg font-label-md text-label-md hover:bg-surface-container-lowest/20 transition-all">
+                        Conocé más
+                    </button>
+</div>
+</div>
+</div>
+</header><section class="py-24 bg-surface-container-low border-b border-outline-variant/30" id="quienes-somos">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<!-- Nuestra Empresa -->
+<div class="space-y-stack-md">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest block">Trayectoria</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Nuestra Empresa</h2>
+<div class="w-20 h-1 bg-primary rounded-full"></div>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+          BOSP Facility Service es una unidad de negocios de <strong>BOSP Argentina SAS</strong>, dedicada exclusivamente a la gestión integral de servicios para complejos residenciales, barrios cerrados y edificios de propiedad horizontal.
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Nuestra estructura nos permite centralizar todas las necesidades operativas, garantizando una respuesta ágil y profesional ante los desafíos diarios de la administración de inmuebles.
+        </p>
+</div>
+<!-- Quiénes Somos -->
+<div class="bg-surface-container-lowest p-stack-lg rounded-2xl shadow-sm border border-outline-variant/50">
+<div class="flex items-center gap-stack-sm mb-stack-md">
+<span class="material-symbols-outlined text-primary text-[32px]" data-icon="groups">groups</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Quiénes Somos</h3>
+</div>
+<p class="font-body-lg text-body-lg text-secondary mb-stack-md">
+          Somos un equipo con un marcado <strong>enfoque corporativo</strong>, que aplica estándares organizados y procesos certificados en el ámbito de los servicios de mantenimiento y limpieza.
+        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Nuestra misión es acompañar a las administraciones y consejos de propietarios, brindando la tranquilidad de una gestión transparente, eficiente y orientada a la excelencia en el cuidado del patrimonio.
+        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Grid Services -->
+<section class="py-stack-lg max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop"><div class="text-center mb-12"><h2 class="font-headline-xl text-headline-xl text-primary mb-4">Nuestros <span class="text-[#00bcd4]">Servicios</span></h2><div class="w-12 h-1 bg-[#00bcd4] mx-auto mb-6"></div><p class="font-body-md text-secondary max-w-2xl mx-auto">Ofrecemos soluciones completas adaptadas a las necesidades específicas de su empresa.</p></div><div class="grid grid-cols-1 md:grid-cols-2 gap-8"><div class="relative group rounded-xl overflow-hidden shadow-lg h-64 md:h-80"><img alt="Limpieza Profesional" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmWAY-0LKxOTqX7urdD7wphbXQKS_GmRaa_mt2ObdxD98wT0r2t3_wH0EoqTvhWKxonKV94w5f7Zp8gGh_lfKfgP-02v0kNuEE7zDR-rOC4DSMtZvx8ymT36qLFBKrQHplEShGWHfUME-5giuPx0WisdPgJuVb9EUCeQ_MN27MFBtnyn6w9baJ9V_lcCRKP6ZM0nUBnNvDYbKEwtpyCvFZenTFslK90xpj8YK31qvdcBhwB9ye3U04A3XNGdVuLz0egIlcKPCYbu-4"/><div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent"></div><div class="absolute inset-0 p-6 flex flex-col justify-end"><div class="w-10 h-10 bg-[#00bcd4] rounded-lg flex items-center justify-center mb-4"><span class="material-symbols-outlined text-on-primary" data-icon="cleaning_services">cleaning_services</span></div><h3 class="font-headline-md text-surface-container-lowest mb-2">Limpieza Profesional</h3><p class="font-body-md text-surface-variant text-label-sm">Servicios de limpieza integral para oficinas, edificios corporativos e instalaciones industriales.</p></div></div><div class="relative group rounded-xl overflow-hidden shadow-lg h-64 md:h-80"><img alt="Mantenimiento Preventivo" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-ckmkfdZKsXBRJmDYC303rRFSH507B7gQGpPHvZTqVRwpPX9lSLjfgs09diSKrP-Ddxa0Ing9yVImdT_05j9zF00F_LcQVC64RDvNI-bYrkACIX8t_QkgFjJ6a-X-XSmmYz2iZD2uuMw3P-fFXVbBTNZXEVIWHErXpi6x2Ti6u7hCq4OLncNWvOyDi8RYZ2QoZZa-ZlYeZWDguS38QNJMDlN0KZkhGrXuPQ-e_UWH_FCVJdrpfuZ1N5dR40jYKVhDZ9kQOvbPZVSc"/><div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent"></div><div class="absolute inset-0 p-6 flex flex-col justify-end"><div class="w-10 h-10 bg-[#00bcd4] rounded-lg flex items-center justify-center mb-4"><span class="material-symbols-outlined text-on-primary" data-icon="build">build</span></div><h3 class="font-headline-md text-surface-container-lowest mb-2">Mantenimiento Preventivo</h3><p class="font-body-md text-surface-variant text-label-sm">Mantenimiento programado de instalaciones eléctricas, plomería, HVAC y sistemas generales.</p></div></div><div class="relative group rounded-xl overflow-hidden shadow-lg h-64 md:h-80"><img alt="Gestión de Instalaciones" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVAYxxp3c1zVOug2468SpSDL6Ob89GEgbSGEk5nAtWV-wq8ZPF4Wk6PtUnAn_VGpHvaSSQv8-7cVCpU46WpkkThIYJSZEHNKs2385ZEU34dEr5gsIgCRnvpbMOlVcEN6TByu5Izfe1isywAElsD9sdXMtBcXU8SLf6a6_TSmFqazfrSZUs3MHBHyRUMt05ggOk_DR_VQLkBVYLX9qd8NUoXo8D9NstHTmFTJ5BRdbIpJBrAqtQPJlF25wv8_OXJQWaQ2WWCJpRMkpv"/><div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent"></div><div class="absolute inset-0 p-6 flex flex-col justify-end"><div class="w-10 h-10 bg-[#00bcd4] rounded-lg flex items-center justify-center mb-4"><span class="material-symbols-outlined text-on-primary" data-icon="security">security</span></div><h3 class="font-headline-md text-surface-container-lowest mb-2">Gestión de Instalaciones</h3><p class="font-body-md text-surface-variant text-label-sm">Administración completa de facility management con protocolos de seguridad certificados.</p></div></div><div class="relative group rounded-xl overflow-hidden shadow-lg h-64 md:h-80"><img alt="Servicio de Calidad" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrUmEzfunyu_wpAfalJ-FZYl_VO4Owl2oY33G2L4mo0l0S87evTVoUJ-oOhODOn2zBeVWsWggaFgia3EC-5y9lGZZnPgsdu-Ekst5lkeaNuiuZZHqWPqS-nxDQXOfHDi17HE3UZfFnIqmbDsKgpevdRhmNk22i3oi4eHFxfy7XPexxf-xm_qZgFWbt4Bu9IQ0U6Eb4bEW3zVgJwiIwvwx2cAtuZGQ4V-K2hjXepuz0uFkI11EAwO5dhb3fsNYwPtGYE-CRV6bcrd-P"/><div class="absolute inset-0 bg-gradient-to-t from-on-surface/90 via-on-surface/20 to-transparent"></div><div class="absolute inset-0 p-6 flex flex-col justify-end"><div class="w-10 h-10 bg-[#00bcd4] rounded-lg flex items-center justify-center mb-4"><span class="material-symbols-outlined text-on-primary" data-icon="verified">verified</span></div><h3 class="font-headline-md text-surface-container-lowest mb-2">Servicio de Calidad</h3><p class="font-body-md text-surface-variant text-label-sm">Personal capacitado y supervisión permanente para asegurar la excelencia en cada tarea.</p></div></div></div></section>
+<!-- Why Choose Us -->
+<section class="bg-on-surface py-24 text-surface-container-lowest overflow-hidden">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-stack-lg">¿Por qué elegir BOSP?</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-12">
+                        Respaldados por BOSP Argentina SAS, ofrecemos una estructura sólida que garantiza la continuidad operativa de sus instalaciones.
+                    </p>
+<ul class="space-y-stack-lg">
+<li class="flex gap-stack-md">
+<div class="flex-shrink-0 text-primary-fixed">
+<span class="material-symbols-outlined text-[32px]" data-icon="verified">verified</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Estructura Sólida</h4>
+<p class="font-body-md text-body-md text-surface-variant">Contamos con el respaldo corporativo necesario para proyectos de gran escala.</p>
+</div>
+</li>
+<li class="flex gap-stack-md">
+<div class="flex-shrink-0 text-primary-fixed">
+<span class="material-symbols-outlined text-[32px]" data-icon="event_repeat">event_repeat</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Enfoque Preventivo</h4>
+<p class="font-body-md text-body-md text-surface-variant">Minimizamos riesgos y costos mediante planes de mantenimiento anticipados.</p>
+</div>
+</li>
+<li class="flex gap-stack-md">
+<div class="flex-shrink-0 text-primary-fixed">
+<span class="material-symbols-outlined text-[32px]" data-icon="visibility">visibility</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md mb-1">Supervisión Directa</h4>
+<p class="font-body-md text-body-md text-surface-variant">Control riguroso de cada tarea para asegurar la excelencia en el servicio.</p>
+</div>
+</li>
+</ul>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/20 rounded-full blur-3xl"></div>
+<div class="bg-surface-container-highest/10 border border-surface-container-lowest/10 p-12 rounded-2xl backdrop-blur-md">
+<div class="text-headline-xl font-bold text-primary-fixed mb-2">100%</div>
+<p class="font-label-md text-label-md text-surface-variant mb-stack-lg uppercase tracking-widest">Compromiso Operativo</p>
+<hr class="border-surface-container-lowest/10 mb-stack-lg"/>
+<div class="space-y-stack-md">
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md">Respuesta Técnica</span>
+<span class="text-primary-fixed font-bold">24/7</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md">Personal Asegurado</span>
+<span class="text-primary-fixed font-bold">Total</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="font-body-md text-body-md">Certificaciones</span>
+<span class="text-primary-fixed font-bold">Vigentes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detail Section: Limpieza -->
+<section class="py-24 bg-surface overflow-hidden">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col lg:flex-row items-center gap-20">
+<div class="w-full lg:w-1/2 order-2 lg:order-1">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-2xl transition-all group-hover:-inset-6"></div>
+<img alt="Detalle Limpieza" class="relative rounded-xl shadow-lg w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbGlFilC0eQFnoYbhzgh_WOXBJzmHLUbo4Ep1OaXlKa_FJxKXWi9pqXVbYHui_8OC-L7gi4djdG0yln9FnTEiWd_KJB6IXquQFWHziEGzHNleODg-0bzXb0yipyakWEwaheMcG76vSl2XDO5j_sHG7P8IFKgm5eAwClSOmCDvDqTjx7ZD1m2vViEQsEaYp3FBc56UW5VCgtn3N1EhKHobt9itmhKuNjg3vnLjtiiIiU2JH5dkJD6s40xqwEumhh4sTQ2Nn-W4F2hS6"/>
+</div>
+</div>
+<div class="w-full lg:w-1/2 order-1 lg:order-2">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-4 block">Ejes de Gestión</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-stack-lg">Excelencia en Limpieza</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-12">
+                        Nuestro servicio de limpieza no es solo superficial; es una gestión integral basada en tres pilares fundamentales.
+                    </p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="glass-card p-stack-md rounded-lg shadow-sm border-l-4 border-primary">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Planificación</h4>
+<p class="font-body-md text-body-md text-secondary">Cronogramas adaptados a la dinámica de cada complejo.</p>
+</div>
+<div class="glass-card p-stack-md rounded-lg shadow-sm border-l-4 border-primary">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Supervisión</h4>
+<p class="font-body-md text-body-md text-secondary">Auditorías periódicas de calidad y cumplimiento.</p>
+</div>
+<div class="glass-card p-stack-md rounded-lg shadow-sm border-l-4 border-primary md:col-span-2">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Optimización</h4>
+<p class="font-body-md text-body-md text-secondary">Uso eficiente de insumos y maquinaria de última generación para mejores resultados.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Detail Section: Mantenimiento -->
+<section class="py-24 bg-background border-t border-outline-variant/30 overflow-hidden">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col lg:flex-row items-center gap-20">
+<div class="w-full lg:w-1/2">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-4 block">Área Operativa</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-stack-lg">Mantenimiento Técnico</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-12">
+                        Especialistas en cada rubro para garantizar que la infraestructura de su edificio funcione sin interrupciones.
+                    </p>
+<div class="space-y-stack-md">
+<div class="flex items-center justify-between p-stack-md bg-surface-container-lowest rounded-lg border border-outline-variant/50 hover:border-primary/50 transition-colors cursor-default">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="apartment">apartment</span>
+<span class="font-headline-md text-headline-md">Edilicia</span>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-stack-md bg-surface-container-lowest rounded-lg border border-outline-variant/50 hover:border-primary/50 transition-colors cursor-default">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="bolt">bolt</span>
+<span class="font-headline-md text-headline-md">Eléctrica</span>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-stack-md bg-surface-container-lowest rounded-lg border border-outline-variant/50 hover:border-primary/50 transition-colors cursor-default">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="water_drop">water_drop</span>
+<span class="font-headline-md text-headline-md">Sanitaria</span>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex items-center justify-between p-stack-md bg-surface-container-lowest rounded-lg border border-outline-variant/50 hover:border-primary/50 transition-colors cursor-default">
+<div class="flex items-center gap-stack-md">
+<span class="material-symbols-outlined text-primary" data-icon="thermostat">thermostat</span>
+<span class="font-headline-md text-headline-md">Climatización</span>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="check_circle">check_circle</span>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/5 rounded-2xl transition-all group-hover:-inset-6"></div>
+<img alt="Detalle Mantenimiento" class="relative rounded-xl shadow-lg w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByfAQQ7ojgkZT7lNuLOzr5KuV9CreOZWx1CUjqLGR1m_dyFwJWVvSHpN57OT15oyS7l0w6d7qOFMuu6Wu5Z0jELNfRsrH3TZ3-H2MGdAAuzg7tw3WQDJoD-TZMg8ZVpYJQqGSRGiQw-fEsrh4484LkqRx5LCcbYzLn3RHfjcBk-bdW4yk9yEDBqbF8TrKyTVIURgjitbw6wMoug6ylBsHBMeXV8lkW8k5ptcFwYLvmh03pgKsW-Qzuo1rwd55QUtVD_N2CGwllpnc6"/>
+</div>
+</div>
+</div>
+</div>
+</section><section class="py-24 bg-surface border-t border-outline-variant/30 overflow-hidden">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col lg:flex-row-reverse items-center gap-20">
+<div class="w-full lg:w-1/2">
+<span class="text-primary font-label-sm text-label-sm uppercase tracking-widest mb-4 block">Servicios Especializados</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-stack-lg">Instalaciones y Redes</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-12">
+Realizamos intervenciones técnicas de alta complejidad en sistemas eléctricos y de infraestructura, asegurando el cumplimiento de normativas vigentes.
+</p>
+<div class="glass-card p-stack-md rounded-lg shadow-sm border-l-4 border-tertiary">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">Seguridad Eléctrica</h4>
+<p class="font-body-md text-body-md text-secondary">Mantenimiento de tableros, cableado estructurado y sistemas de emergencia.</p>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary/5 rounded-2xl transition-all group-hover:-inset-6"></div>
+<img alt="Instalaciones Eléctricas" class="relative rounded-xl shadow-lg w-full h-[500px] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFnI0pv3IpOSkE0BAMmlqeM92Gs0GKFxqOaPU0VKQnj3wfNOuX57cUUUMq74MBgQcr_6lnKPy5IDQz6Jg8jWOZf1L3gbHF6qDkmnYB7QQgPkpiRcrYPZHERpEaNppOLpp8pm73JTYQuKniiDL2iZgOwGYn-SmfE9GzMrPn4INnJL3JH-YoUPUiRKRtbcXH91bl9tcl8jKdM8SCXKJgPreP4AJJPMaCOdAROhU3-QJ-cBuNDyoDPwe1Pl8cAUrNnvAtlu5HkrjrRRtV"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-24 bg-primary text-on-primary">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-headline-xl text-headline-xl mb-stack-md">Transforme la gestión de su complejo</h2>
+<p class="font-body-lg text-body-lg text-primary-fixed mb-stack-lg max-w-2xl mx-auto">
+                Solicite hoy mismo una consultoría sin cargo para evaluar las necesidades de su inmueble y presentar un plan de servicios a medida.
+            </p>
+<button class="bg-surface-container-lowest text-primary px-12 py-5 rounded-lg font-headline-md text-headline-md hover:bg-primary-fixed transition-all shadow-xl hover:scale-105 duration-300">
+                Contactar a un Asesor
+            </button>
+</div>
+</section>
+<!-- Respaldo Institucional -->
+<section class="py-24 bg-surface-container-low border-t border-outline-variant/30 overflow-hidden">
+<div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row items-center justify-center gap-12 text-center md:text-left">
+<div class="w-full md:w-1/3 flex justify-center">
+<img alt="BOSP Argentina SAS Logo" class="w-64 h-auto object-contain blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzxrNqa78OOIt0kiw5vVB8vAFPxNfPWJFAv9u3AKJKrXl4_H39YTzIr_pXQwqQH5i8j7pnNUcED0k3iUUts-sg6NEgPjGNrffhtMJzuwaxyVYLxNgbmR5GnkbR9Zk9py4n8bQi5DwaNwfxmvxI4BTwSBWo6CjNg8jdFuYf8VpNEFWqsA9J8M-SWkdrAnuSn3gAE-oiQedbFs1Nz9CUJqOh6ExB3G0NAnlbx7rCe4MfCo3aM2Ql2WJgHr7z3MFkR1h_4vg"/>
+</div>
+<div class="w-full md:w-2/3 max-w-2xl">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-stack-md">Respaldo Institucional</h2>
+<p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                        BOSP Facility Service opera bajo el sólido respaldo corporativo de <strong>BOSP Argentina SAS</strong>. Nuestra estructura nos permite afrontar proyectos de gran envergadura, garantizando los recursos humanos, técnicos y financieros necesarios para brindar un servicio ininterrumpido y de máxima calidad en la gestión de sus instalaciones.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest text-surface-container-lowest dark:text-on-surface border-t border-outline/20">
+<div class="flex flex-col md:flex-row justify-between items-start gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max-width mx-auto">
+<div class="max-w-xs">
+<div class="mb-stack-md bg-white p-3 rounded-xl inline-block shadow-sm">
+<img alt="BOSP Facility Service Logo" class="h-14 w-auto object-contain blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALBViRuvNZvefAUG_3elMk6I2SxjPMZPTZEqpA3N96EVFBGjj86JyS2kMLf4cC8ZKgAmCMVF_uSdJX91CRzOWAqu35Kd0PFPjWa4s0H-aH7Qvz8uHIcnKzTELDpoTe9qH_0XP029GZsBCblD4dAN_f0_U1VzCCI3-NvlgJbooOHJqOEc2uy_vSuB5v58HNauMmD_w6S_5jlmEK0Wmo8tt3pao0dRMD7RmsUfi2YuOcRNPxyZbvmWmgWq1zM4y1ut2U9k0"/>
+</div>
+<p class="font-body-md text-body-md text-surface-variant mb-stack-lg">
+                    Líderes en gestión integral de servicios para inmuebles corporativos y residenciales de alta gama.
+                </p>
+<div class="flex gap-stack-md">
+<a class="w-10 h-10 rounded-full bg-surface-variant/20 flex items-center justify-center hover:bg-[#2D6A24] transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant/20 flex items-center justify-center hover:bg-[#2D6A24] transition-colors" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-gutter w-full md:w-auto">
+<div>
+<h5 class="font-label-md text-label-md text-primary-fixed mb-stack-md uppercase tracking-widest">Compañía</h5>
+<ul class="space-y-stack-sm">
+<li><a class="font-label-sm text-label-sm text-surface-variant hover:text-surface-container-lowest transition-colors hover:underline underline-offset-4" href="#">Privacidad</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant hover:text-surface-container-lowest transition-colors hover:underline underline-offset-4" href="#">Términos de Servicio</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-md text-label-md text-primary-fixed mb-stack-md uppercase tracking-widest">Soporte</h5>
+<ul class="space-y-stack-sm">
+<li><a class="font-label-sm text-label-sm text-surface-variant hover:text-surface-container-lowest transition-colors hover:underline underline-offset-4" href="#">Preguntas Frecuentes</a></li>
+<li><a class="font-label-sm text-label-sm text-surface-variant hover:text-surface-container-lowest transition-colors hover:underline underline-offset-4" href="#">Trabajá con nosotros</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="border-t border-outline/10 py-6 text-center max-w-container-max-width mx-auto">
+<p class="font-label-sm text-label-sm text-surface-variant">© 2024 BOSP Argentina SAS. Todos los derechos reservados.</p>
+</div>
+</footer>
+<script>
+        // Smooth reveal on scroll interaction
+        const observerOptions = {
+            threshold: 0.1
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html><html class="light" lang="es" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>BOSP TECH - Innovación Tecnológica en Seguridad Electrónica</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#0d8550",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f7fafc",
+                        "surface-container-high": "#e5e9eb",
+                        "inverse-on-surface": "#eef1f3",
+                        "secondary": "#545f72",
+                        "primary-container": "#0077c8",
+                        "surface-dim": "#d7dadc",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "error-container": "#ffdad6",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#74db9d",
+                        "primary": "#005e9f",
+                        "outline-variant": "#c0c7d3",
+                        "primary-fixed-dim": "#9fcaff",
+                        "surface-container": "#ebeef0",
+                        "on-surface": "#181c1e",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "background": "#f7fafc",
+                        "on-surface-variant": "#404751",
+                        "inverse-surface": "#2d3133",
+                        "surface-variant": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f1f4f6",
+                        "on-tertiary-fixed": "#002110",
+                        "secondary-container": "#d5e0f7",
+                        "outline": "#717783",
+                        "on-secondary-fixed": "#111c2c",
+                        "surface-container-highest": "#e0e3e5",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#00497e",
+                        "surface": "#f7fafc",
+                        "on-tertiary-fixed-variant": "#00522f",
+                        "on-background": "#181c1e",
+                        "tertiary-fixed": "#91f8b8",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#001d36",
+                        "on-primary-container": "#fbfbff",
+                        "tertiary": "#006a3e",
+                        "primary-fixed": "#d2e4ff",
+                        "inverse-primary": "#9fcaff",
+                        "secondary-fixed": "#d8e3fa",
+                        "surface-tint": "#0061a5",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#f3fff3",
+                        "on-error-container": "#93000a",
+                        "on-secondary-container": "#586377",
+                        "tech-orange": "#f99e1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-xl": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased">
+<!-- Universal Navbar -->
+<nav class="fixed top-0 left-0 w-full h-[80px] flex items-center justify-center z-[1000] bg-[#021224] border-b border-white/5 transition-all duration-300">
+  <div class="w-full max-w-[1200px] px-8 flex items-center justify-between">
+    <a href="index.html" class="flex items-center">
+      <img src="images/logo1.png" alt="GRUPO BOSP" class="h-[55px] w-auto object-contain transition-all duration-300">
+    </a>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="text-white/85 text-[15px] font-medium py-2 px-4 relative transition-all duration-300 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#87D0E1] after:transition-all after:duration-300">Inicio</a>
+      <a href="index.html#about" class="text-white/85 text-[15px] font-medium py-2 px-4 relative transition-all duration-300 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#87D0E1] after:transition-all after:duration-300">Quiénes Somos</a>
+      <div class="relative group">
+        <div class="flex items-center gap-1 cursor-pointer text-white/85 text-[15px] font-medium py-2 px-4 hover:text-white transition-all duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#87D0E1] after:transition-all after:duration-300">
+          Servicios
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-2 min-w-[240px] bg-[#021224]/95 backdrop-blur-md rounded-xl p-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 shadow-[0_16px_48px_rgba(2,18,36,0.8)] border border-white/10">
+          <a href="bosp-argentina.html" class="flex items-center gap-2 p-2 rounded-md text-[14px] text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="w-8 h-8 rounded-md bg-[#87D0E1]/15 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#87D0E1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="flex flex-col">
+              <span>BOSP Argentina</span>
+              <span class="text-[12px] text-white/50 font-normal">Seguridad Física</span>
+            </div>
+          </a>
+          <a href="bosp-tech.html" class="flex items-center gap-2 p-2 rounded-md text-[14px] text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="w-8 h-8 rounded-md bg-[#87D0E1]/15 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#87D0E1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg>
+            </div>
+            <div class="flex flex-col">
+              <span>BOSP Tech</span>
+              <span class="text-[12px] text-white/50 font-normal">Seguridad Tecnológica</span>
+            </div>
+          </a>
+          <a href="bosp-facility.html" class="flex items-center gap-2 p-2 rounded-md text-[14px] text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="w-8 h-8 rounded-md bg-[#87D0E1]/15 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-[#87D0E1]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="flex flex-col">
+              <span>BOSP Facility</span>
+              <span class="text-[12px] text-white/50 font-normal">Mantenimiento y Limpieza</span>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a href="contacto.html" class="text-white/85 text-[15px] font-medium py-2 px-4 relative transition-all duration-300 hover:text-white after:content-[''] after:absolute after:bottom-0 after:left-1/2 after:-translate-x-1/2 after:w-0 hover:after:w-full after:h-[2px] after:bg-[#87D0E1] after:transition-all after:duration-300">Contacto</a>
+    </div>
+    <button class="md:hidden text-white flex flex-col gap-[5px] p-2">
+      <span class="w-[26px] h-[2.5px] bg-white rounded-sm"></span>
+      <span class="w-[26px] h-[2.5px] bg-white rounded-sm"></span>
+      <span class="w-[26px] h-[2.5px] bg-white rounded-sm"></span>
+    </button>
+  </div>
+</nav>
+<div class="h-[80px] w-full bg-background"></div>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative w-full h-[80vh] min-h-[600px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Control Center Background" class="w-full h-full object-cover" src="images/tech/tech7.jpg">
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/90 via-on-surface/70 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-container-max-width px-margin-mobile md:px-margin-desktop mx-auto">
+<div class="max-w-3xl">
+<h1 class="font-headline-xl text-headline-xl text-surface-container-lowest mb-6">
+                        Innovación Tecnológica en<br>
+<span class="text-tech-orange">Seguridad Electrónica</span>
+</h1>
+<p class="font-body-lg text-body-lg text-surface-container-low mb-8 max-w-2xl">
+                        Soluciones integrales de protección para infraestructuras críticas, consorcios y empresas. Tecnología de vanguardia respaldada por expertos.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-on-primary font-label-md text-label-md px-8 py-3 rounded-lg hover:bg-surface-tint transition-all shadow-md" href="#servicios">Nuestros Servicios</a>
+<a class="bg-transparent border border-outline text-surface-container-lowest font-label-md text-label-md px-8 py-3 rounded-lg hover:bg-surface-container-lowest/10 transition-all" href="#contacto">Solicitar Asesoramiento</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Who We Are -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto" id="nosotros">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">El Respaldo de Grupo BOSP</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                        BOSP TECH es la unidad especializada en seguridad electrónica de Grupo BOSP. Nacemos con el propósito de integrar tecnología de punta en los procesos de Facility Management y Seguridad Física, ofreciendo una capa de control inteligente y predictivo.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-12">
+<div class="glass-panel p-6 rounded-xl">
+<span class="material-symbols-outlined text-tech-orange mb-4" style="font-size: 32px; font-variation-settings: 'FILL' 1;">visibility</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Visión</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Ser referentes en la implementación de entornos seguros e inteligentes, integrando sistemas que anticipen riesgos.</p>
+</div>
+<div class="glass-panel p-6 rounded-xl">
+<span class="material-symbols-outlined text-primary mb-4" style="font-size: 32px; font-variation-settings: 'FILL' 1;">target</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Misión</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Proveer soluciones tecnológicas robustas que protejan el capital humano y material de nuestros clientes.</p>
+</div>
+</div>
+</div>
+<div class="relative h-[500px] rounded-2xl overflow-hidden shadow-2xl">
+<img alt="BOSP TECH Logo" class="w-full h-full object-cover bg-surface-container-lowest" src="images/tech/tech9.jpg">
+</div>
+</div>
+</section>
+<!-- Services Grid -->
+<section class="py-24 bg-surface-container-lowest px-margin-mobile md:px-margin-desktop" id="servicios">
+<div class="max-w-container-max-width mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">Nuestras Soluciones</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Sistemas de alta disponibilidad diseñados para operar de manera continua y eficiente.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-gutter">
+<!-- Service 1 -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Acceso Vehicular" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/tech/tech8.jpg">
+</div>
+<div class="p-8 bg-surface-container-lowest relative z-10 -mt-8 mx-4 rounded-xl shadow-sm border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">directions_car</span>
+                                Acceso Vehicular
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Automatización de portones, barreras de alta velocidad y bolardos retráctiles para control de tráfico pesado y liviano.</p>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Control de Acceso" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/tech/tech4.png">
+</div>
+<div class="p-8 bg-surface-container-lowest relative z-10 -mt-8 mx-4 rounded-xl shadow-sm border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">fingerprint</span>
+                                Control de Acceso
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sistemas biométricos avanzados, lectura de DNI y reconocimiento facial para una gestión de ingresos segura y auditable.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Video Vigilancia" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/tech/tech1.jpg">
+</div>
+<div class="p-8 bg-surface-container-lowest relative z-10 -mt-8 mx-4 rounded-xl shadow-sm border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">videocam</span>
+                                Video Vigilancia
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Circuitos cerrados (CCTV) con tecnología IP, domos PTZ de seguimiento automático y cámaras térmicas para análisis perimetral.</p>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="group relative overflow-hidden rounded-2xl border border-outline-variant/30 hover:shadow-xl transition-all duration-300">
+<div class="h-64 overflow-hidden">
+<img alt="Seguridad Perimetral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/tech/tech2.jpg">
+</div>
+<div class="p-8 bg-surface-container-lowest relative z-10 -mt-8 mx-4 rounded-xl shadow-sm border border-outline-variant/20">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">fence</span>
+                                Seguridad Perimetral
+                            </h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Protección activa mediante cercos eléctricos homologados, sensores de vibración y monitoreo en tiempo real vía App móvil.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="order-2 lg:order-1 relative h-[600px] rounded-2xl overflow-hidden">
+<img alt="Técnico Trabajando" class="w-full h-full object-cover" src="images/tech/tech5.png">
+<div class="absolute inset-0 bg-primary/10"></div>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-8">¿Por qué elegir BOSP TECH?</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">integration_instructions</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">Soluciones Integrales</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Diseñamos, instalamos y mantenemos ecosistemas completos, asegurando que todos los componentes hablen el mismo idioma.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">memory</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">Tecnología de Vanguardia</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Equipamiento de última generación con capacidades de inteligencia artificial y aprendizaje profundo para la detección proactiva.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="flex-shrink-0 w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-1">Soporte Permanente</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Mesa de ayuda técnica y cuadrillas de mantenimiento preventivo y correctivo con SLAs estrictos de resolución.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-on-surface dark:bg-surface-container-lowest full-width border-t border-outline/20 flex flex-col md:flex-row justify-between items-start gap-gutter px-margin-mobile md:px-margin-desktop py-stack-lg max-w-container-max-width mx-auto">
+<div class="flex flex-col gap-4">
+<span class="text-headline-md font-bold text-surface-container-lowest dark:text-on-surface">BOSP TECH</span>
+<p class="font-body-md text-body-md text-surface-variant max-w-sm">
+                Innovación tecnológica en seguridad electrónica. Una empresa de Grupo BOSP.
+            </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-surface-container-lowest mb-2 uppercase tracking-wider">Legal</h4>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-surface-container-lowest transition-colors hover:underline underline-offset-4" href="#">Privacidad</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-surface-container-lowest transition-colors hover:underline underline-offset-4" href="#">Términos de Servicio</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-label-sm text-surface-container-lowest mb-2 uppercase tracking-wider">Compañía</h4>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-surface-container-lowest transition-colors hover:underline underline-offset-4" href="#">Preguntas Frecuentes</a>
+<a class="font-body-md text-body-md text-surface-variant dark:text-on-surface-variant hover:text-surface-container-lowest transition-colors hover:underline underline-offset-4" href="#">Trabajá con nosotros</a>
+</div>
+<div class="w-full mt-8 md:mt-0 pt-8 border-t border-outline/20 flex flex-col md:flex-row justify-between items-center text-surface-variant font-label-sm text-label-sm">
+<span class="">© 2024 BOSP Argentina SAS. Todos los derechos reservados.</span>
+</div>
+</footer>
+
+
+</body></html>
