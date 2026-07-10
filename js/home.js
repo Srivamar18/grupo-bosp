@@ -119,4 +119,27 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.animationDelay = `${0.5 + index * 0.2}s`;
   });
 
+  // ---------- About Tabs (Misión / Visión / Valores) ----------
+  const tabButtons = document.querySelectorAll('.about-tab-btn');
+  const tabPanels = document.querySelectorAll('.about-tab-panel');
+
+  if (tabButtons.length > 0) {
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetTab = btn.getAttribute('data-tab');
+
+        // Deactivate all
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabPanels.forEach(p => p.classList.remove('active'));
+
+        // Activate selected
+        btn.classList.add('active');
+        const targetPanel = document.getElementById('tab-' + targetTab);
+        if (targetPanel) {
+          targetPanel.classList.add('active');
+        }
+      });
+    });
+  }
+
 });
