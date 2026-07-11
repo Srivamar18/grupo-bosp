@@ -4,15 +4,11 @@
 
 /* ---------- Hero Section ---------- */
 .hero {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: var(--gradient-hero);
   position: relative;
   overflow: hidden;
-  padding: calc(var(--navbar-height) + var(--space-xl)) var(--space-xl) var(--space-2xl);
 }
 
 .hero-bg-grid {
@@ -59,9 +55,44 @@
 
 .hero-top {
   text-align: center;
-  margin-bottom: var(--space-3xl);
   position: relative;
   z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: calc(var(--navbar-height) + var(--space-xl)) var(--space-xl) var(--space-xl);
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Video Background */
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background:
+    linear-gradient(180deg,
+      rgba(5, 15, 30, 0.75) 0%,
+      rgba(5, 15, 30, 0.55) 40%,
+      rgba(5, 15, 30, 0.65) 70%,
+      rgba(5, 15, 30, 0.85) 100%);
+  pointer-events: none;
 }
 
 .hero-corporate-block {
@@ -164,6 +195,19 @@
   opacity: 0;
 }
 
+.hero-bottom-separator {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  max-width: 1000px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  opacity: 0;
+  animation: fadeInUp 1s ease 1s forwards;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -195,6 +239,8 @@
   max-width: 1100px;
   position: relative;
   z-index: 2;
+  margin: 0 auto;
+  padding: 0 var(--space-xl) var(--space-4xl);
 }
 
 .hero-service-card {
@@ -848,9 +894,7 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding-top: calc(var(--navbar-height) + var(--space-2xl));
-    padding-bottom: var(--space-3xl);
-    min-height: auto;
+    padding: 0;
   }
 
   .hero-corporate-block {
