@@ -292,23 +292,53 @@
                                 </a>
                         </div>
                 </section>
-                <!-- Nuestra Compañía -->
-                <section class="py-16 md:py-24 bg-surface px-margin-mobile md:px-margin-desktop" id="compania">
-                        <div class="max-w-container-max-width mx-auto flex flex-col md:flex-row gap-12 items-center">
-                                <div class="w-full md:w-1/2">
-                                        <h2 class="text-primary text-headline-lg mb-6">Nuestra Compañía</h2>
-                                        <p class="text-on-surface-variant text-body-lg mb-6 leading-relaxed">
-                                                Somos una empresa líder en seguridad privada, con años de experiencia
-                                                protegiendo lo que más importa. Nuestro equipo está conformado por
-                                                profesionales altamente capacitados, comprometidos con la excelencia y
-                                                la integridad en cada servicio.
-                                        </p>
+                <!-- Nuestra Empresa & Quiénes Somos -->
+                <section class="py-24 bg-surface-container-low border-b border-outline-variant/30" id="compania">
+                        <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                                        <!-- Nuestra Empresa -->
+                                        <div class="space-y-stack-md">
+                                                <span
+                                                        class="text-primary font-label-sm text-label-sm uppercase tracking-widest block">Trayectoria</span>
+                                                <h2 class="font-headline-lg text-headline-lg text-on-surface">Nuestra
+                                                        Empresa</h2>
+                                                <div class="w-20 h-1 bg-primary rounded-full"></div>
+                                                <p class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                                                        En BOSP ARGENTINA S.A.S. Desarrollamos sistemas de seguridad
+                                                        orientados al control de accesos, monitoreo preventivo,
+                                                        supervisión operativa y trazabilidad de la información,
+                                                        aplicables tanto a urbanizaciones privadas como a
+                                                        establecimientos comerciales, industriales y de servicios.
 
-                                </div>
-                                <div class="w-full md:w-1/2">
-                                        <img alt="Personal de BOSP"
-                                                class="w-full h-auto rounded-xl shadow-lg object-cover aspect-video"
-                                                src="images/Argentina/Bosp-argentina2.JPG" />
+                                                        Nuestra estructura nos permite centralizar todas las necesidades
+                                                        operativas, garantizando una respuesta ágil y profesional ante
+                                                        los desafíos diarios de la administración de inmuebles.
+                                                </p>
+
+                                        </div>
+                                        <!-- Quiénes Somos -->
+                                        <div
+                                                class="relative overflow-hidden p-stack-lg rounded-2xl shadow-sm border border-outline-variant/50">
+                                                <img alt="Personal de BOSP" class="absolute inset-0 w-full h-full object-cover" src="images/Argentina/Bosp-argentina2.JPG" />
+                                                <div class="absolute inset-0 bg-surface-container-lowest/85 backdrop-blur-sm"></div>
+                                                
+                                                <div class="relative z-10 flex items-center gap-stack-sm mb-stack-md">
+                                                        <span class="material-symbols-outlined text-primary text-[32px]"
+                                                                data-icon="groups">groups</span>
+                                                        <h3 class="font-headline-md text-headline-md text-on-surface">
+                                                                Quiénes Somos</h3>
+                                                </div>
+                                                <p class="relative z-10 font-body-lg text-body-lg text-secondary mb-stack-md">
+                                                        Somos BOSP ARGENTINA, la unidad especializada en seguridad
+                                                        física de GRUPO BOSP. Nuestro propósito es brindar tranquilidad
+                                                        a través de soluciones de protección diseñadas para cada
+                                                        organización. Contamos con personal capacitado, supervisión
+                                                        permanente y protocolos de actuación que nos permiten ofrecer un
+                                                        servicio profesional, preventivo y de excelencia, resguardando
+                                                        personas, bienes e instalaciones en una amplia variedad de
+                                                        entornos.
+                                                </p>
+                                        </div>
                                 </div>
                         </div>
                 </section>
@@ -330,136 +360,203 @@
                                                         organizaciones.</p>
                                         </div>
                                         <!-- Right Panel - Cards -->
-                                        <div class="flex-1 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                                                <!-- Bodegas -->
-                                                <div class="group relative rounded-2xl overflow-hidden flex flex-col"
-                                                        style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
-                                                        <div class="relative h-48 overflow-hidden">
-                                                                <img alt="Seguridad en Bodegas"
-                                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                                                        src="images/Argentina/argentina12.jpeg" />
-                                                                <div class="absolute inset-0"
-                                                                        style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
-                                                                </div>
-                                                        </div>
-                                                        <div class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
-                                                                <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
-                                                                        style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
-                                                                        <span class="material-symbols-outlined text-lg"
-                                                                                style="color: #ffffff;">factory</span>
-                                                                </div>
-                                                                <h3 class="text-base font-semibold mb-2"
-                                                                        style="color: #ffffff;">Bodegas</h3>
-                                                                <p class="text-xs leading-relaxed mb-4 flex-1"
-                                                                        style="color: #9ca3af;">Protegemos y cuidamos
-                                                                        instalaciones vitivinícolas y depósitos.</p>
+                                        <div class="flex-1 relative">
+                                                <!-- Scroll Left Button -->
+                                                <button id="left-scroll-btn"
+                                                        onclick="document.getElementById('services-scroll').scrollBy({left: -300, behavior: 'smooth'})"
+                                                        class="absolute left-0 md:-left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:scale-105 transition-all duration-300 cursor-pointer"
+                                                        style="background-color: #ffffff; color: #111418; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); opacity: 0; pointer-events: none;">
+                                                        <span
+                                                                class="material-symbols-outlined text-xl md:text-2xl">chevron_left</span>
+                                                </button>
 
-                                                        </div>
-                                                </div>
-                                                <!-- Edificios -->
-                                                <div class="group relative rounded-2xl overflow-hidden flex flex-col"
-                                                        style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
-                                                        <div class="relative h-48 overflow-hidden">
-                                                                <img alt="Seguridad en Edificios"
-                                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                                                        src="images/Argentina/argentina 10.jpg" />
-                                                                <div class="absolute inset-0"
-                                                                        style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
-                                                                </div>
-                                                        </div>
-                                                        <div class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
-                                                                <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
-                                                                        style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
-                                                                        <span class="material-symbols-outlined text-lg"
-                                                                                style="color: #ffffff;">apartment</span>
-                                                                </div>
-                                                                <h3 class="text-base font-semibold mb-2"
-                                                                        style="color: #ffffff;">Edificios</h3>
-                                                                <p class="text-xs leading-relaxed mb-4 flex-1"
-                                                                        style="color: #9ca3af;">Seguridad y
-                                                                        tranquilidad para edificios corporativos y
-                                                                        residenciales.</p>
+                                                <div id="services-scroll"
+                                                        class="flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4"
+                                                        style="scrollbar-width: none;"
+                                                        onscroll="const btn = document.getElementById('left-scroll-btn'); if(this.scrollLeft > 10) { btn.style.opacity = 1; btn.style.pointerEvents = 'auto'; } else { btn.style.opacity = 0; btn.style.pointerEvents = 'none'; }">
+                                                        <style>
+                                                                #services-scroll::-webkit-scrollbar {
+                                                                        display: none;
+                                                                }
+                                                        </style>
 
-                                                        </div>
-                                                </div>
-                                                <!-- Comercios -->
-                                                <div class="group relative rounded-2xl overflow-hidden flex flex-col"
-                                                        style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
-                                                        <div class="relative h-48 overflow-hidden">
-                                                                <img alt="Seguridad en Comercios"
-                                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                                                        src="images/Argentina/argentina11.jpg" />
-                                                                <div class="absolute inset-0"
-                                                                        style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
+                                                        <!-- Barrios (New) -->
+                                                        <div class="group relative rounded-2xl overflow-hidden flex flex-col flex-shrink-0 snap-start w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(20%-13px)]"
+                                                                style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
+                                                                <div class="relative h-48 overflow-hidden">
+                                                                        <img alt="Seguridad en Barrios"
+                                                                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                                                src="images/Argentina/argentina13.jpg" />
+                                                                        <div class="absolute inset-0"
+                                                                                style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
+                                                                        </div>
+                                                                </div>
+                                                                <div
+                                                                        class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
+                                                                        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
+                                                                                style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
+                                                                                <span class="material-symbols-outlined text-lg"
+                                                                                        style="color: #ffffff;">maps_home_work</span>
+                                                                        </div>
+                                                                        <h3 class="text-base font-semibold mb-2"
+                                                                                style="color: #ffffff;">Barrios</h3>
+                                                                        <p class="text-xs leading-relaxed mb-4 flex-1"
+                                                                                style="color: #9ca3af;">Seguridad y
+                                                                                vigilancia
+                                                                                para barrios privados,countries y zonas
+                                                                                residenciales.</p>
                                                                 </div>
                                                         </div>
-                                                        <div class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
-                                                                <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
-                                                                        style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
-                                                                        <span class="material-symbols-outlined text-lg"
-                                                                                style="color: #ffffff;">storefront</span>
-                                                                </div>
-                                                                <h3 class="text-base font-semibold mb-2"
-                                                                        style="color: #ffffff;">Comercios</h3>
-                                                                <p class="text-xs leading-relaxed mb-4 flex-1"
-                                                                        style="color: #9ca3af;">Ambientes
-                                                                        seguros para que tu negocio funcione siempre.
-                                                                </p>
 
-                                                        </div>
-                                                </div>
-                                                <!-- Clínicas -->
-                                                <div class="group relative rounded-2xl overflow-hidden flex flex-col"
-                                                        style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
-                                                        <div class="relative h-48 overflow-hidden">
-                                                                <img alt="Seguridad en Clínicas"
-                                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                                                        src="images/Argentina/argentina16.jpg" />
-                                                                <div class="absolute inset-0"
-                                                                        style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
+                                                        <!-- Bodegas -->
+                                                        <div class="group relative rounded-2xl overflow-hidden flex flex-col flex-shrink-0 snap-start w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(20%-13px)]"
+                                                                style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
+                                                                <div class="relative h-48 overflow-hidden">
+                                                                        <img alt="Seguridad en Bodegas"
+                                                                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                                                src="images/Argentina/argentina12.jpeg" />
+                                                                        <div class="absolute inset-0"
+                                                                                style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
+                                                                        </div>
+                                                                </div>
+                                                                <div
+                                                                        class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
+                                                                        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
+                                                                                style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
+                                                                                <span class="material-symbols-outlined text-lg"
+                                                                                        style="color: #ffffff;">factory</span>
+                                                                        </div>
+                                                                        <h3 class="text-base font-semibold mb-2"
+                                                                                style="color: #ffffff;">Bodegas</h3>
+                                                                        <p class="text-xs leading-relaxed mb-4 flex-1"
+                                                                                style="color: #9ca3af;">Protegemos y
+                                                                                cuidamos
+                                                                                instalaciones vitivinícolas y depósitos.
+                                                                        </p>
                                                                 </div>
                                                         </div>
-                                                        <div class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
-                                                                <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
-                                                                        style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
-                                                                        <span class="material-symbols-outlined text-lg"
-                                                                                style="color: #ffffff;">local_hospital</span>
-                                                                </div>
-                                                                <h3 class="text-base font-semibold mb-2"
-                                                                        style="color: #ffffff;">Farmacias</h3>
-                                                                <p class="text-xs leading-relaxed mb-4 flex-1"
-                                                                        style="color: #9ca3af;">Seguridad en
-                                                                        entornos donde la salud es lo más importante.
-                                                                </p>
 
-                                                        </div>
-                                                </div>
-                                                <!-- Centros Logísticos -->
-                                                <div class="group relative rounded-2xl overflow-hidden flex flex-col col-span-2 sm:col-span-1"
-                                                        style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
-                                                        <div class="relative h-48 overflow-hidden">
-                                                                <img alt="Seguridad en Centros Logísticos"
-                                                                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                                                                        src="images/Argentina/argentina14.jpg" />
-                                                                <div class="absolute inset-0"
-                                                                        style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
+                                                        <!-- Edificios -->
+                                                        <div class="group relative rounded-2xl overflow-hidden flex flex-col flex-shrink-0 snap-start w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(20%-13px)]"
+                                                                style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
+                                                                <div class="relative h-48 overflow-hidden">
+                                                                        <img alt="Seguridad en Edificios"
+                                                                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                                                src="images/Argentina/argentina 10.jpg" />
+                                                                        <div class="absolute inset-0"
+                                                                                style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
+                                                                        </div>
+                                                                </div>
+                                                                <div
+                                                                        class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
+                                                                        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
+                                                                                style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
+                                                                                <span class="material-symbols-outlined text-lg"
+                                                                                        style="color: #ffffff;">apartment</span>
+                                                                        </div>
+                                                                        <h3 class="text-base font-semibold mb-2"
+                                                                                style="color: #ffffff;">Edificios</h3>
+                                                                        <p class="text-xs leading-relaxed mb-4 flex-1"
+                                                                                style="color: #9ca3af;">Seguridad y
+                                                                                tranquilidad para edificios corporativos
+                                                                                y
+                                                                                residenciales.</p>
                                                                 </div>
                                                         </div>
-                                                        <div class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
-                                                                <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
-                                                                        style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
-                                                                        <span class="material-symbols-outlined text-lg"
-                                                                                style="color: #ffffff;">local_shipping</span>
-                                                                </div>
-                                                                <h3 class="text-base font-semibold mb-2"
-                                                                        style="color: #ffffff;">Supermercados</h3>
-                                                                <p class="text-xs leading-relaxed mb-4 flex-1"
-                                                                        style="color: #9ca3af;">Control y vigilancia
-                                                                        para establecimientos mayoristas o minoristas.
-                                                                </p>
 
+                                                        <!-- Comercios -->
+                                                        <div class="group relative rounded-2xl overflow-hidden flex flex-col flex-shrink-0 snap-start w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(20%-13px)]"
+                                                                style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
+                                                                <div class="relative h-48 overflow-hidden">
+                                                                        <img alt="Seguridad en Comercios"
+                                                                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                                                src="images/Argentina/argentina11.jpg" />
+                                                                        <div class="absolute inset-0"
+                                                                                style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
+                                                                        </div>
+                                                                </div>
+                                                                <div
+                                                                        class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
+                                                                        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
+                                                                                style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
+                                                                                <span class="material-symbols-outlined text-lg"
+                                                                                        style="color: #ffffff;">storefront</span>
+                                                                        </div>
+                                                                        <h3 class="text-base font-semibold mb-2"
+                                                                                style="color: #ffffff;">Comercios</h3>
+                                                                        <p class="text-xs leading-relaxed mb-4 flex-1"
+                                                                                style="color: #9ca3af;">Ambientes
+                                                                                seguros para que tu negocio funcione
+                                                                                siempre.</p>
+                                                                </div>
                                                         </div>
+
+                                                        <!-- Farmacias -->
+                                                        <div class="group relative rounded-2xl overflow-hidden flex flex-col flex-shrink-0 snap-start w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(20%-13px)]"
+                                                                style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
+                                                                <div class="relative h-48 overflow-hidden">
+                                                                        <img alt="Seguridad en Farmacias"
+                                                                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                                                src="images/Argentina/argentina16.jpg" />
+                                                                        <div class="absolute inset-0"
+                                                                                style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
+                                                                        </div>
+                                                                </div>
+                                                                <div
+                                                                        class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
+                                                                        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
+                                                                                style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
+                                                                                <span class="material-symbols-outlined text-lg"
+                                                                                        style="color: #ffffff;">local_hospital</span>
+                                                                        </div>
+                                                                        <h3 class="text-base font-semibold mb-2"
+                                                                                style="color: #ffffff;">Farmacias</h3>
+                                                                        <p class="text-xs leading-relaxed mb-4 flex-1"
+                                                                                style="color: #9ca3af;">Seguridad en
+                                                                                entornos donde la salud es lo más
+                                                                                importante.</p>
+                                                                </div>
+                                                        </div>
+
+                                                        <!-- Supermercados -->
+                                                        <div class="group relative rounded-2xl overflow-hidden flex flex-col flex-shrink-0 snap-start w-[calc(50%-8px)] sm:w-[calc(33.333%-11px)] lg:w-[calc(20%-13px)]"
+                                                                style="min-height: 340px; background-color: #1a1d21; border: 1px solid rgba(255,255,255,0.08);">
+                                                                <div class="relative h-48 overflow-hidden">
+                                                                        <img alt="Seguridad en Supermercados"
+                                                                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                                                                src="images/Argentina/argentina14.jpg" />
+                                                                        <div class="absolute inset-0"
+                                                                                style="background: linear-gradient(to top, #1a1d21 0%, transparent 60%);">
+                                                                        </div>
+                                                                </div>
+                                                                <div
+                                                                        class="flex flex-col flex-1 p-4 pt-0 -mt-4 relative z-10">
+                                                                        <div class="w-9 h-9 rounded-lg flex items-center justify-center mb-3"
+                                                                                style="background-color: rgba(255,255,255,0.1); backdrop-filter: blur(8px);">
+                                                                                <span class="material-symbols-outlined text-lg"
+                                                                                        style="color: #ffffff;">local_shipping</span>
+                                                                        </div>
+                                                                        <h3 class="text-base font-semibold mb-2"
+                                                                                style="color: #ffffff;">Supermercados
+                                                                        </h3>
+                                                                        <p class="text-xs leading-relaxed mb-4 flex-1"
+                                                                                style="color: #9ca3af;">Control y
+                                                                                vigilancia
+                                                                                para establecimientos mayoristas o
+                                                                                minoristas.</p>
+                                                                </div>
+                                                        </div>
+
+
                                                 </div>
+
+                                                <!-- Scroll Right Button -->
+                                                <button onclick="document.getElementById('services-scroll').scrollBy({left: 300, behavior: 'smooth'})"
+                                                        class="absolute right-0 md:-right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center hover:scale-105 transition-transform cursor-pointer"
+                                                        style="background-color: #ffffff; color: #111418; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);">
+                                                        <span
+                                                                class="material-symbols-outlined text-xl md:text-2xl">chevron_right</span>
+                                                </button>
                                         </div>
                                 </div>
                         </div>
