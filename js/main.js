@@ -6,27 +6,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---------- Preloader ----------
-  const preloader = document.getElementById('preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        preloader.classList.add('hidden');
-        // Remove from DOM after transition
-        setTimeout(() => {
-          preloader.remove();
-        }, 600);
-      }, 800);
-    });
 
-    // Fallback: hide preloader after 3 seconds max
-    setTimeout(() => {
-      if (preloader && !preloader.classList.contains('hidden')) {
-        preloader.classList.add('hidden');
-        setTimeout(() => preloader.remove(), 600);
-      }
-    }, 3000);
-  }
 
   // ---------- Navbar Scroll Effect ----------
   const navbar = document.getElementById('navbar');
