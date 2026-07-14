@@ -240,7 +240,11 @@
   position: relative;
   z-index: 2;
   margin: 0 auto;
-  padding: 0 var(--space-xl) var(--space-4xl);
+  padding: var(--space-2xl) var(--space-xl);
+  background: rgba(2, 18, 36, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius-lg);
 }
 
 .hero-service-card {
@@ -868,6 +872,225 @@
   font-size: 1.1rem;
 }
 
+/* ============================================
+   DARK SECTION — Pillars through CTA
+   ============================================ */
+.dark-section {
+  background: rgba(2, 18, 36, 0.98);
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-4xl) 0;
+  color: #fff;
+}
+
+.dark-section-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+
+/* --- Pillars inside dark-section --- */
+.dark-section .about-pillars {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-section .about-pillar span {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.dark-section .pillar-icon {
+  background: rgba(135, 208, 225, 0.12);
+  color: var(--blue-300);
+}
+
+.dark-section .about-pillar:hover .pillar-icon {
+  background: var(--blue-300);
+  color: var(--blue-900);
+}
+
+.dark-section .pillar-divider {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* --- Tabs inside dark-section --- */
+.dark-section .about-tabs-nav {
+  border-bottom-color: rgba(255, 255, 255, 0.12);
+}
+
+.dark-section .about-tab-btn {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.dark-section .about-tab-btn:hover {
+  color: var(--blue-300);
+}
+
+.dark-section .about-tab-btn.active {
+  color: #fff;
+  border-bottom-color: var(--blue-300);
+}
+
+.dark-section .about-tabs-content {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: none;
+}
+
+.dark-section .about-tab-panel h3 {
+  color: #fff;
+}
+
+.dark-section .about-tab-panel p {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.dark-section .valor-item {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.dark-section .valor-item:hover {
+  background: rgba(135, 208, 225, 0.12);
+}
+
+.dark-section .valor-dot {
+  background: var(--blue-300);
+}
+
+/* --- Services inside dark-section --- */
+.dark-section .services-section {
+  padding: var(--space-4xl) 0;
+}
+
+.dark-section .section-header h2 {
+  color: #fff;
+}
+
+.dark-section .section-header p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-section .service-detail-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.dark-section .service-detail-card:hover {
+  border-color: rgba(135, 208, 225, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.dark-section .service-card-header::after {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.dark-section .service-card-body {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.dark-section .service-card-body p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.dark-section .service-card-features li {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.dark-section .service-card-features li svg {
+  color: var(--blue-300);
+}
+
+.dark-section .service-card-body .btn {
+  background: rgba(135, 208, 225, 0.12);
+  color: var(--blue-300);
+  border: 1px solid rgba(135, 208, 225, 0.25);
+}
+
+.dark-section .service-card-body .btn:hover {
+  background: var(--blue-300);
+  color: var(--blue-900);
+  border-color: var(--blue-300);
+}
+
+/* --- CTA inside dark-section --- */
+.dark-section .home-cta {
+  background: none;
+  padding: var(--space-4xl) 0 var(--space-xl);
+  text-align: center;
+  position: relative;
+}
+
+.dark-section .home-cta::before {
+  display: none;
+}
+
+.dark-section .home-cta h2 {
+  color: #fff;
+}
+
+.dark-section .home-cta p {
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 500px;
+  margin: 0 auto var(--space-xl);
+  font-size: 1.1rem;
+}
+
+/* --- Badge override --- */
+.dark-section .badge-primary {
+  background: rgba(135, 208, 225, 0.12);
+  color: var(--blue-300);
+  border: 1px solid rgba(135, 208, 225, 0.2);
+}
+
+/* --- Section header underline --- */
+.dark-section .section-header h2::after {
+  background: var(--gradient-accent);
+}
+
+/* --- CTA Buttons inside dark-section --- */
+.dark-section .home-cta .btn-outline {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.dark-section .home-cta .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* --- Subtle glow accents --- */
+.dark-section::before {
+  content: '';
+  position: absolute;
+  top: -200px;
+  right: -150px;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(135, 208, 225, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.dark-section::after {
+  content: '';
+  position: absolute;
+  bottom: -200px;
+  left: -150px;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(95, 132, 162, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
 /* ---------- Responsive Home ---------- */
 @media (max-width: 1024px) {
   .hero-services {
@@ -969,6 +1192,15 @@
     border-bottom-color: transparent;
     border-left-color: var(--blue-600);
     background: var(--blue-50);
+  }
+
+  .dark-section .about-tab-btn.active {
+    border-left-color: var(--blue-300);
+    background: rgba(135, 208, 225, 0.08);
+  }
+
+  .dark-section .about-tabs-content {
+    border-top-color: rgba(255, 255, 255, 0.1);
   }
 
   .about-tabs-content {
