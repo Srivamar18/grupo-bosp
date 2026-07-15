@@ -50,3 +50,41 @@ Consulta de autorizaciones
 Sistema de monitoreo de cámaras (Supercam) 
 Comunicación permanente con base operativa 
 Estas herramientas permiten rapidez, reducción de errores y disponibilidad inmediata de información.
+
+BOSP ARGENTINA SAS 
+Marco Legal: 
+-Legislación Específica de Seguridad Privada 
+(Ley Provincial 9578)
+-Disposiciones emitidas por la Dirección de Seguridad Privada (DI.SE.P)
+-Ley de Contrato de trabajo 20.744
+-Normativas de Seguridad e Higiene Laboral 
+-Protección de Datos y Confidencialidad
+
+ESTRUCTURA ORGANIZACIONAL:
+DIRECCIÓN TÉCNICA 
+COORDINACIÓN OPERATIVA 
+SUPERVISORES 
+BASE DE MONITORES EN TIEMPO REAL 
+VIGILADORES 
+
+MISION 
+‘Brindar servicio de seguridad preventiva con profesionalismo, responsabilidad y compromiso, protegiendo a nuestros clientes mediante personal capacitado, procedimientos organizados y un estricto cumplimiento de la normativa vigente ‘
+
+VISION
+‘Consolidarnos como una empresa referente en seguridad privada en la Provincia de Mendoza,reconocida por la calidad de servicio, el profesionalismo de su personal, el cumplimiento de la normativa vigente y el crecimiento sostenido basado en la mejora continua’
+
+OBJETIVOS PRINCIPALES 
+Brindar servicios de seguridad preventiva que responda a las necesidades de cada cliente 
+
+Proteger personas, bienes e instalaciones mediante procedimientos organizados y personal capacitado 
+
+Mantener un elevado nivel de cumplimiento de la normativa vigente 
+
+Capacitación permanente el recurso humano 
+
+Consolidar una empresa trasparente, confiable y sostenible
+
+Fortalecer la relación con clientes mediante  un servicio profesional y calidad
+
+
+cmabios en el hero sextion bosp argentina agregar mision y vision.
