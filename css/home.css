@@ -274,6 +274,11 @@
   box-shadow: 0 20px 60px rgba(0,0,0,0.3);
 }
 
+.hero-service-card:active {
+  transform: translateY(-4px);
+  border-color: rgba(135, 208, 225, 0.4);
+}
+
 /* White logo area at the top */
 .hero-service-logo-area {
   background: #fefefe;
@@ -559,6 +564,9 @@
   color: var(--color-text-light);
   cursor: pointer;
   transition: var(--transition-base);
+  min-height: 48px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .about-tab-btn svg {
@@ -727,6 +735,10 @@
   transform: translateY(-8px);
   box-shadow: var(--shadow-xl);
   border-color: var(--blue-200);
+}
+
+.service-detail-card:active {
+  transform: translateY(-3px);
 }
 
 .service-card-header {
@@ -1144,6 +1156,22 @@
     gap: var(--space-md);
   }
 
+  .hero-service-card {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  .hero-service-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .hero-service-card:active {
+    transform: scale(0.98);
+    border-color: rgba(135, 208, 225, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  }
+
   .hero-service-logo-area {
     min-height: 120px;
     padding: var(--space-lg) var(--space-md);
@@ -1175,6 +1203,10 @@
     padding: var(--space-xl);
   }
 
+  .about-pillar {
+    min-height: 44px;
+  }
+
   .about-tabs-nav {
     flex-direction: column;
     gap: 0;
@@ -1185,7 +1217,10 @@
     border-bottom: none;
     border-left: 3px solid transparent;
     margin-bottom: 0;
-    padding: var(--space-sm) var(--space-lg);
+    padding: var(--space-md) var(--space-lg);
+    min-height: 48px;
+    width: 100%;
+    justify-content: flex-start;
   }
 
   .about-tab-btn.active {
@@ -1217,10 +1252,35 @@
     font-size: 2.2rem;
   }
 
+  .stat-card:hover {
+    transform: none;
+  }
+
+  .stat-card:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-md);
+  }
+
   .services-grid {
     grid-template-columns: 1fr;
     max-width: 450px;
     margin: 0 auto;
+  }
+
+  .service-detail-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .service-detail-card:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--blue-200);
+  }
+
+  /* Ensure full-width buttons in service cards are tapable */
+  .service-card-body .btn {
+    min-height: 48px;
   }
 }
 

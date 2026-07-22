@@ -86,6 +86,10 @@
   border-color: var(--blue-200);
 }
 
+.feature-card:active {
+  transform: translateY(-2px);
+}
+
 .feature-card:hover::before {
   height: 100%;
 }
@@ -202,6 +206,10 @@
   border-color: var(--blue-200);
 }
 
+.why-card:active {
+  transform: translateY(-2px);
+}
+
 .why-card-icon {
   width: 64px;
   height: 64px;
@@ -274,6 +282,9 @@
   align-items: center;
   justify-content: space-between;
   background: var(--color-bg-alt);
+  min-height: 48px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .accordion-item summary::-webkit-details-marker {
@@ -619,10 +630,32 @@
     margin: 0 auto;
   }
 
+  .feature-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .feature-card:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-md);
+    border-color: var(--blue-200);
+  }
+
   .why-choose-grid {
     grid-template-columns: 1fr;
     max-width: 400px;
     margin: 0 auto;
+  }
+
+  .why-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .why-card:active {
+    transform: scale(0.98);
+    box-shadow: var(--shadow-md);
+    border-color: var(--blue-200);
   }
 
   .form-row {
@@ -637,6 +670,15 @@
   .service-list-number {
     width: auto;
     font-size: 1.5rem;
+  }
+
+  .contact-info-card {
+    min-height: 48px;
+  }
+
+  .contact-social-link {
+    min-width: 44px;
+    min-height: 44px;
   }
 }
 
