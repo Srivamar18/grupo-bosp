@@ -314,21 +314,21 @@
                 <!-- Nuestra Empresa & Quiénes Somos -->
                 <section class="py-24 bg-surface-container-low border-b border-outline-variant/30" id="compania">
                         <div class="max-w-container-max-width mx-auto px-margin-mobile md:px-margin-desktop">
-                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
                                         <!-- Misión y Visión -->
-                                        <div class="flex flex-col gap-stack-lg justify-center">
+                                        <div class="flex flex-col gap-6">
                                                 <!-- Misión -->
                                                 <div
-                                                        class="bg-surface-container-lowest p-stack-lg rounded-2xl shadow-sm border border-outline-variant/50">
-                                                        <div class="flex items-center gap-stack-sm mb-stack-md">
-                                                                <span class="material-symbols-outlined text-primary text-[32px]"
+                                                        class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/50 flex-1">
+                                                        <div class="flex items-center gap-stack-sm mb-3">
+                                                                <span class="material-symbols-outlined text-primary text-[28px]"
                                                                         data-icon="flag">flag</span>
                                                                 <h3
-                                                                        class="font-headline-md text-headline-md text-on-surface">
+                                                                        class="font-headline-md text-[20px] leading-7 font-semibold text-on-surface">
                                                                         Misión</h3>
                                                         </div>
                                                         <p
-                                                                class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                                                                class="font-body-md text-body-md text-secondary leading-relaxed">
                                                                 Brindar servicio de seguridad preventiva con
                                                                 profesionalismo, responsabilidad y compromiso,
                                                                 protegiendo a nuestros clientes mediante personal
@@ -339,16 +339,16 @@
 
                                                 <!-- Visión -->
                                                 <div
-                                                        class="bg-surface-container-lowest p-stack-lg rounded-2xl shadow-sm border border-outline-variant/50">
-                                                        <div class="flex items-center gap-stack-sm mb-stack-md">
-                                                                <span class="material-symbols-outlined text-primary text-[32px]"
+                                                        class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm border border-outline-variant/50 flex-1">
+                                                        <div class="flex items-center gap-stack-sm mb-3">
+                                                                <span class="material-symbols-outlined text-primary text-[28px]"
                                                                         data-icon="visibility">visibility</span>
                                                                 <h3
-                                                                        class="font-headline-md text-headline-md text-on-surface">
+                                                                        class="font-headline-md text-[20px] leading-7 font-semibold text-on-surface">
                                                                         Visión</h3>
                                                         </div>
                                                         <p
-                                                                class="font-body-lg text-body-lg text-secondary leading-relaxed">
+                                                                class="font-body-md text-body-md text-secondary leading-relaxed">
                                                                 Consolidarnos como una empresa referente en seguridad
                                                                 privada en la Provincia de Mendoza, reconocida por la
                                                                 calidad de servicio, el profesionalismo de su personal,
@@ -357,24 +357,16 @@
                                                         </p>
                                                 </div>
                                         </div>
-                                        <!-- Quiénes Somos -->
+                                        <!-- Quiénes Somos + Slideshow (single card) -->
                                         <div
-                                                class="relative overflow-hidden p-stack-lg rounded-2xl shadow-sm border border-outline-variant/50">
-                                                <img alt="Personal de BOSP"
-                                                        class="absolute inset-0 w-full h-full object-cover"
-                                                        src="images/Argentina/Bosp-argentina2.JPG" />
-                                                <div
-                                                        class="absolute inset-0 bg-surface-container-lowest/85 backdrop-blur-sm">
-                                                </div>
-
-                                                <div class="relative z-10 flex items-center gap-stack-sm mb-stack-md">
-                                                        <span class="material-symbols-outlined text-primary text-[32px]"
+                                                class="relative overflow-hidden p-stack-lg rounded-2xl shadow-sm border border-outline-variant/50 bg-surface-container-lowest h-full flex flex-col">
+                                                <div class="flex items-center gap-stack-sm mb-3">
+                                                        <span class="material-symbols-outlined text-primary text-[28px]"
                                                                 data-icon="groups">groups</span>
-                                                        <h3 class="font-headline-md text-headline-md text-on-surface">
+                                                        <h3 class="font-headline-md text-[20px] leading-7 font-semibold text-on-surface">
                                                                 Quiénes Somos</h3>
                                                 </div>
-                                                <p
-                                                        class="relative z-10 font-body-lg text-body-lg text-secondary mb-stack-md">
+                                                <p class="font-body-md text-body-md text-secondary mb-4 leading-relaxed">
                                                         Somos BOSP ARGENTINA, la unidad especializada en seguridad
                                                         física de GRUPO BOSP. Nuestro propósito es brindar tranquilidad
                                                         a través de soluciones de protección diseñadas para cada
@@ -384,6 +376,24 @@
                                                         personas, bienes e instalaciones en una amplia variedad de
                                                         entornos.
                                                 </p>
+                                                <div class="relative w-full rounded-xl overflow-hidden shadow-md flex-grow min-h-[200px] md:min-h-[280px]" id="arg-slideshow">
+                                                        <img src="images/Argentina/arg16.jpg" alt="Foto BOSP" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-100 arg-slide" loading="lazy">
+                                                        <img src="images/Argentina/arg17.jpg" alt="Foto BOSP" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 arg-slide" loading="lazy">
+                                                        <img src="images/Argentina/arg18.jpg" alt="Foto BOSP" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 arg-slide" loading="lazy">
+                                                        <img src="images/Argentina/arg19.jpg" alt="Foto BOSP" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 arg-slide" loading="lazy">
+                                                        <img src="images/Argentina/arg20.jpg" alt="Foto BOSP" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 arg-slide" loading="lazy">
+                                                        <img src="images/Argentina/arg21.jpg" alt="Foto BOSP" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 arg-slide" loading="lazy">
+                                                        <img src="images/Argentina/arg17.jpg" alt="Foto BOSP" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 opacity-0 arg-slide" loading="lazy">
+                                                </div>
+                                                <div class="flex justify-center gap-2 mt-3" id="arg-slideshow-dots">
+                                                        <span class="w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 arg-dot bg-primary"></span>
+                                                        <span class="w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 arg-dot bg-primary/30"></span>
+                                                        <span class="w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 arg-dot bg-primary/30"></span>
+                                                        <span class="w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 arg-dot bg-primary/30"></span>
+                                                        <span class="w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 arg-dot bg-primary/30"></span>
+                                                        <span class="w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 arg-dot bg-primary/30"></span>
+                                                        <span class="w-2.5 h-2.5 rounded-full cursor-pointer transition-all duration-300 arg-dot bg-primary/30"></span>
+                                                </div>
                                         </div>
                                 </div>
                         </div>
@@ -953,6 +963,20 @@
                         setInterval(() => {
                                 currentFleetSlide = (currentFleetSlide + 1) % 4;
                                 fleetSlider.style.transform = `translateX(-${(currentFleetSlide * 100) / 4}%)`;
+                        }, 4000);
+                }
+
+                // Slideshow Quiénes Somos
+                let currentArgSlide = 0;
+                const argSlides = document.querySelectorAll('.arg-slide');
+                const argDots = document.querySelectorAll('.arg-dot');
+                if (argSlides.length > 0) {
+                        setInterval(() => {
+                                argSlides[currentArgSlide].classList.replace('opacity-100', 'opacity-0');
+                                argDots[currentArgSlide].classList.replace('bg-primary', 'bg-primary/30');
+                                currentArgSlide = (currentArgSlide + 1) % argSlides.length;
+                                argSlides[currentArgSlide].classList.replace('opacity-0', 'opacity-100');
+                                argDots[currentArgSlide].classList.replace('bg-primary/30', 'bg-primary');
                         }, 4000);
                 }
         </script>
