@@ -282,10 +282,14 @@
                         <div
                                 class="relative z-10 w-full max-w-container-max-width px-margin-mobile md:px-margin-desktop mx-auto">
                                 <div class="max-w-3xl">
+                                        <span
+                                                class="inline-block px-5 py-1.5 bg-primary/20 text-primary-fixed-dim rounded-full text-label-md font-label-md mb-stack-md backdrop-blur-sm border border-primary/30">
+                                                BOSP ARGENTINA
+                                        </span>
                                         <h1
                                                 class="font-headline-xl text-headline-xl text-surface-container-lowest mb-6">
-                                                Seguridad Privada con<br>
-                                                <span class="text-primary">Respaldo Operativo</span>
+                                                Seguridad Privada<br>
+                                                <span class="text-primary">BOSP ARGENTINA - MENDOZA</span>
                                         </h1>
                                         <p class="font-body-lg text-body-lg text-surface-container-low mb-8 max-w-2xl">
                                                 Brindamos soluciones integrales de seguridad con personal altamente
@@ -803,14 +807,14 @@
                                 <div
                                         class="w-full lg:w-1/2 relative overflow-hidden rounded-xl h-64 md:h-96 shadow-lg border border-outline-variant">
                                         <div class="absolute inset-0 flex transition-transform duration-1000 ease-in-out"
-                                                id="fleet-slider" style="width: 300%;">
-                                                <img alt="Vehículo BOSP" class="w-1/3 h-full object-cover"
+                                                id="fleet-slider" style="width: 400%;">
+                                                <img alt="Vehículo BOSP" class="w-1/4 h-full object-cover"
                                                         src="images/Argentina/argentina6.jpg" />
-                                                <img alt="Vehículo BOSP" class="w-1/3 h-full object-cover"
+                                                <img alt="Vehículo BOSP" class="w-1/4 h-full object-cover"
                                                         src="images/Argentina/argentina7.jpg" />
-                                                <img alt="Motos BOSP" class="w-1/3 h-full object-cover"
+                                                <img alt="Motos BOSP" class="w-1/4 h-full object-cover"
                                                         src="images/Argentina/argentina9.png" />
-                                                <img alt="Motos BOSP" class="w-1/3 h-full object-cover"
+                                                <img alt="Motos BOSP" class="w-1/4 h-full object-cover"
                                                         src="images/Argentina/argentina15.jpg" />
                                         </div>
                                 </div>
@@ -939,7 +943,7 @@
                 </div>
                 <div
                         class="max-w-container-max-width mx-auto mt-12 pt-8 border-t border-outline text-center text-on-surface-variant text-label-sm">
-                        © 2024 BOSP ARGENTINA. Todos los derechos reservados.
+                        © BOSP ARGENTINA. Todos los derechos reservados.
                 </div>
         </footer>
         <script>
@@ -947,8 +951,8 @@
                 const fleetSlider = document.getElementById('fleet-slider');
                 if (fleetSlider) {
                         setInterval(() => {
-                                currentFleetSlide = (currentFleetSlide + 1) % 3;
-                                fleetSlider.style.transform = `translateX(-${(currentFleetSlide * 100) / 3}%)`;
+                                currentFleetSlide = (currentFleetSlide + 1) % 4;
+                                fleetSlider.style.transform = `translateX(-${(currentFleetSlide * 100) / 4}%)`;
                         }, 4000);
                 }
         </script>
